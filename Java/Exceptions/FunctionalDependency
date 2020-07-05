@@ -37,3 +37,7 @@ readingTheContentsOfAFile(aFile) {
     square(x) {
         returns x*x;
     }
+
+Quiz:
+1) If f-> h,g under what condtions f will be pure?
+    Both h and g should be pure and f should not depend on any external object.
