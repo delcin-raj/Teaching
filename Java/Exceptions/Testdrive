@@ -1,0 +1,39 @@
+The first thing to think about, before discussing exceptions functional dependencies.
+
+1. Functional dependency
+What do I mean by f -> g?
+
+f(args) {
+    result = computation{
+                g()
+                ......
+                ......
+             }
+    returns result
+}
+
+2. Impure function (Relations in mathematics not a function)
+    If it has internal state dependecy of a function.
+    For the same input values it returns different output at different times.
+
+f(args) {
+    result = computation {
+                external object a // which is basically shared by many programs
+                .....
+                .....
+             }
+}
+examples,
+readingTheContentsOfAFile(aFile) {
+    open(aFile);
+    return the contents of the file
+}
+
+
+3. pure function.
+    It is basically a mathematical function which means for each input there is a 
+    unique output.
+    examples;
+    square(x) {
+        returns x*x;
+    }
