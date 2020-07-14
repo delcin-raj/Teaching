@@ -1,0 +1,95 @@
+Why you need a function to approximate the data?
+You are studying probability in order to understand the probability distribution
+of the underlying phenonmena.
+
+Axiom:
+    Sum of probability of all events should be 1
+
+What is probability distribution?
+Here the phenonmena is tossing a coin.
+underlying distribution is nothing but probability of a particular event
+to occur.
+H | T P(H) = P(T) = 0.5
+
+Let's assume you have an unfair coin, such that
+
+P(H) = 0.8  and P(T) = 0.2
+
+Rolling a die is another phenonmena, where the underlying probability
+distribution is,
+P(1) = P(2) = ... = P(6) = 1/6
+
+So what happens when you are attempting to study an event which is 
+happening in the real world? For example let's take preidcting the weahter.
+Humans are much interested in knowing weather as it affects their life 
+greatly. But atmosphere is a complex system, meaning many factors affect
+its behaviour. For example the Sun, the moon, the ocean currents, the wind,
+the composition of air, humidity of that local area, and so on....
+
+So it is not possible to measure all the affecting variables in the first 
+place. Meaning let's asssume that you are trying to study weather. Is it 
+possible for you to know all the affecting variables in the first place?
+If the answer is no what will you do?
+
+You approach probability and statistics for help because
+for a given measurement there can be potentially many outcomes.
+
+f(x,y) = x^2 + y^2
+Let's say you don't know the function but you want to study it.
+You can make measurement of the function and you can measure x but
+you can't measure y.
+f(1) = 1, f(1) = 5, f(1) = 1, f(1) = It can be any positive number >= 1
+
+So what is the point of studying some phenonmena for which the underlying
+variables are unknown and you have the ability to measure some of the
+affecting variables. And you are interested in preidcting the outcome 
+of the phenonmena. 
+
+Example you are trying to study the relationship between temperature 
+and rainfall. You have collected some data.
+
+1) T = 30, R = False
+2) T = 29, R = False
+3) T = 35, R = True 
+4) T = 30, R = True
+5) T = 30, R = False
+
+3 datapoints have T = 30, 1),4),5)
+P(Rain to occur | T = 30) = 1/3
+
+Probability is the field of study which works based on some assumptions 
+about the underlying probability distribution.
+
+Statistics is the field of study in which you try to find a probability
+distribution (which is theoretical) which best describes the data.
+
+Newton studied extensively the astronomical data that was collected by
+Kepler and he came up with a function which best describes gravity as 
+a functioni distance between two objects. 
+
+H -> 0
+T -> 1
+P(0) = 0.5 = P(1)
+P(x) = 0 for all x other than 0 and 1
+Discrete Probability:
+Axiom: sum of probability of all events should be 1.
+
+Continuous Probability:
+Axiom: Integral of probability of all events should be 1.
+
+Omega is the phenonmena basically it represents the set of all 
+events. 
+So what is an event? It is the subset of the possible occurences.
+Examples.
+In Coin flipping
+{H},{T}, {}, {H,T}, P({H,T}) = 1, P({}) = 0
+
+In rolling dies,
+{1,2,3} {4,5,6}, {1} , {3,4},... like this you have 2^6 events.
+P({1,2,3}) = 0.5, P({1,2,3,4,5}) = 5/6
+
+P((3,4)) = P([3,4])
+P([3,4])
+
+
+
