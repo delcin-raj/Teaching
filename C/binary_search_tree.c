@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+// Compiler replaces Node as struct node
 typedef struct node {
     int key;
     // You can store a complex data here
@@ -12,7 +12,7 @@ typedef struct node {
 }Node;
 
 // In general it should accept data
-Node* insert (int,Node*);
+void insert (int,Node**);
 int isEmpty(Node*);
 void inorder(Node*);
 void preorder(Node*);
@@ -51,19 +51,19 @@ int isEmpty(Node* tree) {
     }
 }
 
-Node* insert (int key,Node* tree) {
+void insert (int key,Node** treeAdd) {
     // Block creationg
     Node* newBlock = (Node*) malloc(sizeof(Node));
     newBlock -> key = key;
     newBlock -> left = NULL; 
     newBlock -> right = NULL; 
-    if (isEmpty(tree)) {
-        tree = newBlock;
+    if (isEmpty(*treeAdd)) {
+        *treeAdd = newBlock;
     }
     else {
         // We are going to search for the appropriate node to insert
         // the newBlock
-        Node* x, *y = tree;
+        Node* x, *y = *treeAdd;
         while (y != NULL) {
             x = y;
             if (key <= y->key) {
@@ -80,7 +80,6 @@ Node* insert (int key,Node* tree) {
             x->right = newBlock;
         }
     }
-    return tree;
 }
 
 // Introduction to recursion
@@ -108,13 +107,14 @@ void preorder(Node* y) {
     
 }
 
+
 // You do postorder
 
 int main() {
     srand(time(0));
     Node* tree = NULL;
     for (int i=0; i<10; i++) {
-        tree = insert(rand()%50,tree);
+        insert(rand()%50,&tree);
     }
     if (isEmpty(tree)) {
         printf("Tree is empty\n");
