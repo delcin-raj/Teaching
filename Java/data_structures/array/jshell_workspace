@@ -1,0 +1,134 @@
+5.0==5.0000
+5.999999999999999999999999999==6
+5.999999999999999999999999999==5.999999
+class A{}
+class B {}
+// Both A and B extends Object class
+// So they are valid Object type
+// Class defines a type
+clear
+Object[] array = [new A(),new B(), new A()]
+Object[] array = new [new A(),new B(), new A()]
+Object[] array = {new A(),new B(), new A()}
+array[0]
+array[1]
+//three blocks of memory has been created in heap
+// The elemenets in array holds the reference(address or pointer) to those memory
+class Rectangle{
+int a;
+float b;
+String s;
+}
+Object[] array = {new Rectangle(), new A()}
+A[] arrayA = {new A(),new B()}
+class dummy {
+int a,b;
+}
+Object d = new dummy()
+d.a = 5
+dummy d1 = new dummy()
+d1.a=5
+// If a reference variable (object) is of a particular type It can only access
+//  The methods and fields defined in that particular type
+Object[] array = [1,new dummy()]
+Object[] array = {1,new dummy()}
+Object[] array = {1.00001}
+p = "string"
+String p = "string"
+String q = "string"
+p==q
+String r = new String("string")
+p == r
+Object[] p = {1,2}
+Object[] q = {1,2}
+p==q
+Object s = "string"
+Object r = "string"
+s == r
+Object [] p = {"string","string"}
+Object [] q = {"string","string"}
+p == q
+p
+String p = "string"
+String r = new String("string")
+p.equalsIgnoreCase(r)
+d
+d.a
+d1.a
+dummy d2 = (dummy)d
+d2.a
+String r = (String) d2
+// Operator Overloading
+Rectangle{}
+class Rectangle{}
+class CustomString{String s) extends String{
+       String s;
+       CustomString(String s) {
+           this.s = s;
+       }
+       @override
+       // it adds particular functionality to the same function
+       // defined in the super
+       public Boolean equals(String other) {
+           if (other.length != this.s.length) return false;
+           for (int i=0;i < other.length,i++) {
+               if (other[i] != this.s[i]) return false;
+           }
+           return true;
+       }
+}
+p
+p.length()
+class CustomString {
+       String s;
+       CustomString(String s) {
+           this.s = s;
+       }
+       // it adds particular functionality to the same function
+       // defined in the super
+       public Boolean equals(String other) {
+           if (other.length() != this.s.length()) return false;
+           for (int i=0;i < other.length();i++) {
+               if (other.charAt(i) != this.s.charAt(i)) return false;
+           }
+           return true;
+       }
+}
+
+// If you create CustomString s= new CustomString("String")
+//CustomString p = new CustomString("etfvs")
+// p==s => p.equals(s)
+
+// equals method was defined in Object class, String class and in
+// CustomString class
+// if a variable p is of CustomString class type it will only have 
+// access to the equals method defined in CustomString class
+CustomString p = new CustomString("string")
+CustomString q = new CustomString("string")
+p==q
+class CustomString {
+       String s;
+       CustomString(String s) {
+           this.s = s;
+       }
+       // it adds particular functionality to the same function
+       // defined in the super
+       @override
+       public Boolean equals(CustomString other) {
+           if (other.s.length() != this.s.length()) return false;
+           for (int i=0;i < other.s.length();i++) {
+               if (other.s.charAt(i) != this.s.charAt(i)) return false;
+           }
+           return true;
+       }
+}
+
+// If you create CustomString s= new CustomString("String")
+//CustomString p = new CustomString("etfvs")
+// p==s => p.equals(s)
+
+// equals method was defined in Object class, String class and in
+// CustomString class
+// if a variable p is of CustomString class type it will only have 
+// access to the equals method defined in CustomString class
+CustomString p = new CustomString("string")
