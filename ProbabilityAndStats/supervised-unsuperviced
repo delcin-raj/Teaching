@@ -1,0 +1,9 @@
+In supervised learning there are two kinds of dataset - training and test
+In unsupervised learning there is only raw dataset.
+
+In supervised learning the goal is to train the computer to learn a lesson.
+I.e., we teach the computer in supervised learning.
+A function is the end result in supervised learning statistician will call that a model.
+
+In unsupervised learning we use the computer to learn.
+I.e., we use the computer as a tool to get further knowledge about the dataset.

@@ -51,7 +51,7 @@ System.out.print(myArray[i]);
 
 
 System.out.println("New Array after the removal of duplicates" + Arrays.toString(myArray));
-       
+input.close();
 }
 }
 
